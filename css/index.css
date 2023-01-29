@@ -4,18 +4,15 @@ body {
   color: hsl(248, 15%, 20%);
 }
 .title{
-  color: #6C55F9!important;
-  font-size: 2rem;
+  color: #5144a5!important;
   font-weight: 500;
-  line-height: 1.2;
-  margin: 2em ;
+  margin-top: 2em ;
   
 }
 .subtitle{
-  color: #6C55F9!important;
+  color: #5144a5!important;
   font-weight: 500;
-  line-height: 1.2;
-  margin: 2em ;
+  margin: 1em 5px ;
 }
 
 .navbar {

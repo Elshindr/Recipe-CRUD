@@ -61,7 +61,7 @@
   <!-- FORM ADD -->
   <section id="addRecipe" class="container warp bg-image" style="margin-top: 5em; background-image: url(../assets/bg_pattern.svg);">
     <h2 class="title">Ajouter une nouvelle recette</h2>
-    <form id="form-add">
+    <form id="form-add" onclick="clickAddNewRecipe(event)">
       <div class="row">
         <div class="col col-2">
           <label for="form_nom" class="form-label">Nom</label>
@@ -107,8 +107,7 @@
         </div>
         <div class="row">
           <div class="col">
-            <span id="res"></span>
-            <input style="margin-top: 1em;" onclick="clickAddNewRecipe(event)" type="submit" class="btn btn-primary" value="Ajouter!" />
+            <input style="margin-top: 1em;"  type="submit" class="btn btn-primary" value="Ajouter!" />
           </div>
         </div>
       </div>
@@ -122,23 +121,23 @@
     <div class="modal-dialog">
       <div class="modal-content" id="modal-content">
         <div class="modal-header">
-          <img style="max-height:18rem;" src="" class="card-img-top" alt="Recette de ${recipe.name}">
+          
+          <img id="modal-img" style="max-height:18rem;" src="" class="card-img-top" alt="">
         </div>
         <div class="modal-body">
           <div>
-            <h3 id="modal-title" class="modal-title"></h3>
-            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 id="modal-title" class="title"></h3>
           </div>
           <div>
-            <h4 id="modal-subtitle" class="modal-title"></h4>
-            <p id="modal-description" class="modal-title"></p>
+            <p id="modal-description"></p>
           </div>
           <div>
-            <p>Ingrédients</p>
+            <h4 class="subtitle">Ingrédients</h4>
             <ul id="modal-list" class="list-group list-group-flush"></ul>
           </div>
               </div>
         <div class="modal-footer">
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
           <i id="modal-remove" class="fas fa-lg fa-trash text-danger" onclick="resetAll()"></i>
           <i id="modal-edit" class="fas fa-lg fa-pen-to-square text-primary" data-dismiss="modal" data-toggle="modal" data-target="#modal-form"></i>
         </div>
@@ -153,13 +152,16 @@
     <div class="modal-dialog">
       <div class="modal-content" id="modal-content">
         <form id="form-edit">
+          
           <div class="modal-header">
-            <h2>Editer une recette</h2>
-            <label for="modal_form_nom" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="modal_form_nom" required />
+            <h2 class="subtitle">Editer une recette</h2>
           </div>
 
           <div class="modal-body">
+
+            <label for="modal_form_nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="modal_form_nom" required />
+      
             <label for="modal_form_nb-part" class="form-label">Nombre de part</label>
             <input type="number" class="form-control" id="modal_form_nb-part" min="0" max="100" required />
 

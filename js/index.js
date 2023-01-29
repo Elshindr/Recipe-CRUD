@@ -65,11 +65,9 @@ function showOneRecipe(recipe) {
   oneRecipe = recipe;
 
   resetModal();
-  document.getElementById("modal-header").setAttribute("src", recipe.link);
-  document.getElementById("modal-title").innerText = recipe.name;
-  document.getElementById(
-    "modal-subtitle"
-  ).innerText = `Pour ${recipe.nb_part} personnes`;
+  document.getElementById("modal-img").setAttribute("src", recipe.link);
+  document.getElementById("modal-img").setAttribute("alt", `Recette de ${recipe.name}`);
+  document.getElementById("modal-title").innerText = `${recipe.name} pour ${recipe.nb_part} personnes`;
   document.getElementById("modal-description").innerText = recipe.description;
 
   for (const ingredient of recipe.ingredients) {
