@@ -60,12 +60,12 @@
 
   <!-- FORM ADD -->
   <section id="addRecipe" class="container warp bg-image" style="margin-top: 5em; background-image: url(../assets/bg_pattern.svg);">
-    <h2 class="title">Ajouter une nouvelle recette</h2>
-    <form id="form-add" onclick="clickAddNewRecipe(event)">
+    <h2 class="title" style="margin-bottom:1em">Ajouter une nouvelle recette</h2>
+    <form id="form-add">
       <div class="row">
         <div class="col col-2">
           <label for="form_nom" class="form-label">Nom</label>
-          <input type="text" class="form-control" id="form_nom" required />
+          <input type="text" class="form-control" id="form_nom" required>
         </div>
         <div class="col col-2">
           <label for="form_nb-part" class="form-label">Nombre de part</label>
@@ -107,7 +107,7 @@
         </div>
         <div class="row">
           <div class="col">
-            <input style="margin-top: 1em;"  type="submit" class="btn btn-primary" value="Ajouter!" />
+            <button style="margin-top: 1em;" onclick="clickAddNewRecipe(event)" type="submit" class="btn btn-primary">Ajouter!</button>
           </div>
         </div>
       </div>

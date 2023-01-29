@@ -213,6 +213,7 @@ function clickChangeRecipe(event, id) {
  * @param {click event} event
  */
 function clickAddNewRecipe(event) {
+
   event.preventDefault();
 
   let newRecipe = {
